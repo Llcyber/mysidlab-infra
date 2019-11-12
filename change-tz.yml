@@ -1,0 +1,13 @@
+- name: Change TZ
+  hosts: all
+  gather_facts: false
+  become: true
+  vars:
+    tz: Asia/Japan
+  
+  tasks:
+    - name: Set timezone to "{{ tz }}"
+      timezone:
+        name: "{{ tz }}"
+    - name: Display the new timezone
+      shell: date +%Z
