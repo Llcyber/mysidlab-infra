@@ -3,7 +3,7 @@
   gather_facts: false
   become: true
   vars:
-    tz: Asia/Japan
+    tz: Asia/Tokyo
   
   tasks:
     - name: Set timezone to "{{ tz }}"
