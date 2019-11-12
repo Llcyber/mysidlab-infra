@@ -1,6 +1,6 @@
 - name: Change TZ
   hosts: all
-  gather_facts: false
+  gather_facts: all
   become: true
   vars:
     tz: Asia/Tokyo
