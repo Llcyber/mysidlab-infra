@@ -1,12 +1,7 @@
-- name: Change TZ
-  hosts: false
-  become: true
-  vars:
-    tz: Asia/Tokyo
-  
+- name: Hello World!
+  hosts: all
+
   tasks:
-    - name: Set timezone to "{{ tz }}"
-      timezone:
-        name: "{{ tz }}"
-    - name: Display the new timezone
-      shell: date +%Z
+
+  - name: Hello World!
+    shell: echo "Hi! Tower is working."
